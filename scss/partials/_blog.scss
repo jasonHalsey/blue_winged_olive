@@ -1,0 +1,118 @@
+body.single-post{
+  .callout.primary{
+    background-color: $grain;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    padding: 1.0em 3.0em;
+    @media only screen and (max-width: 40em) {
+      padding: 0.75em 1.0em;
+    }
+  }
+
+  .callout{
+    border: none;
+    margin: -5.0em 0 5.0em 0;
+    @include clearfix;
+  }
+  img.alignleft{
+    float:left;
+    margin: 0em 1.0em 1.0em 0;
+  }
+  h1{
+    font-family: $primayHeaderFont;
+    font-weight: 600;
+  }
+  h1.main_title{
+    width:100%;
+    border-bottom: 1px solid $blackish;
+  }
+  .separator{
+    display:none;
+  }
+  .blog_author{
+    font-family: $primayHeaderFont;
+    font-weight: 700;
+    font-size: 0.75em;
+  }
+}
+
+/*-- Sidebar--*/
+li.cat-item{
+  a{
+    color:$dk_gray;
+    &:hover{
+      color:$primaryBlue;
+    }
+  }
+}
+
+/*---------------*/
+/***** Sarah *****/
+/*---------------*/
+
+figure.effect-sarah {
+  background: #42b078;
+}
+
+figure.effect-sarah img {
+  max-width: none;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-sarah:hover img {
+  opacity: 0.4;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah figcaption {
+  text-align: left;
+}
+
+figure.effect-sarah h2 {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5em 0;
+  font-family: $secondayHeaderFont;
+}
+
+figure.effect-sarah h2::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p {
+  padding: 1em 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+figure.effect-sarah:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}

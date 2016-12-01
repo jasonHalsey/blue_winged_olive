@@ -1,0 +1,46 @@
+
+.review-col{
+	padding:2.0em 1.0em;
+}
+//Testimonial Column
+#testimonials{
+	border-left: 1px solid $blackish;
+	border-right: 1px solid $blackish;
+	div.testimonial-wrap{
+		margin-bottom: 3.0em;
+		p.testimonial_name{
+			text-align: right;
+			font-family: $secondayHeaderFont;
+			font-weight: 600;
+			font-size: 0.75em;
+		}
+		p.testimonial_quote{
+			font-style: italic;
+			display: block;
+			background-color: $grain;
+			padding:1.0em;
+			color: $blackboard;
+			line-height: 1.5em;
+			margin-bottom: 0;
+		}
+	}
+}
+//END Testimonial Column
+
+//TripAdvisor Widget Overrides
+#CDSWIDSSP{
+	width: 100%!important;
+	.widSSPData{
+		border:none !important;
+		.widSSPOneReview{
+			.widSSPBullet{
+				li{
+					span.widSSPQuote{
+						font-size: 16px!important;
+					}
+				}
+			}
+		}
+	}
+}
+//END TripAdvisor Widget Overrides //
