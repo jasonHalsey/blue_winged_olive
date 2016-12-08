@@ -550,6 +550,12 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
 				'type'    => 'wysiwyg',
 				'options' => array( 'textarea_rows' => 5, ),
 			),
+      array(
+        'name'    => __( 'River Description', 'cmb2' ),
+        'id'      => $prefix . 'river_description',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 5, ),
+      ),
 			array(
 				'name' => __( 'Profile Image', 'cmb2' ),
 				'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),

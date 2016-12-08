@@ -39,7 +39,7 @@ h3.page_title{
     position:relative;
     font-size:4.5em;
     line-height: 1.0em;
-    margin-left:1.0%;
+    // margin-left:1.0%;
     width:100%;
     margin-top: 1%; 
     @media only screen and (max-width: 1040px) {
@@ -54,7 +54,7 @@ h3.page_subtitle{
     font-size: 1.50em;
     font-style: italic;
     color: $grain;
-    margin-left:1.0%;
+    // margin-left:1.0%;
     width:50%;
     margin-bottom: 2%; 
     background-color: $blackboard;
@@ -190,12 +190,16 @@ div.feed_row{
         padding:0;
     }
 }
+div.feed_content{
+    max-width: $max-width;
+}
 div.feed_block.light{
     color:#fff;
     .feed_content{
         background-color: rgba(0,0,0,0.5);
         @include clearfix;
         padding:1.0em;
+        max-width: 1600px;
     }
     h2{
         a{

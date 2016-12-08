@@ -1,4 +1,13 @@
 
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 figure {
   position: relative;
   float: left;
@@ -80,6 +89,11 @@ figure p {
 figure.effect-oscar {
   background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
   background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+   &:hover{
+    h2.lng_title{
+      top:5%!important;
+    }
+  }
 }
 
 figure.effect-oscar img {
@@ -121,13 +135,14 @@ figure.effect-oscar h2 {
 } 
 
 figure.effect-oscar h2.lng_title{
-  margin: -20% 0 10px 0;
-    @media only screen and (max-width: 2000px) {
-      margin: -20% 0 10px 0;
-    }
-    @media only screen and (min-width: 1500px) {
-      margin: -30% 0 10px 0;
-    }
+  @include vertical-align();
+  // margin: -20% 0 10px 0;
+  //   @media only screen and (max-width: 2000px) {
+  //     margin: -20% 0 10px 0;
+  //   }
+  //   @media only screen and (min-width: 1500px) {
+  //     margin: -30% 0 10px 0;
+  //   }
 }
 
 figure.effect-oscar figcaption::before,
@@ -140,7 +155,7 @@ figure.effect-oscar p {
 }
 
 figure.effect-oscar:hover h2 {
-  margin: 15% 0 10px 0;
+  margin: 0% 0 10px 0;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
   @media only screen and (max-width: 40em) {
