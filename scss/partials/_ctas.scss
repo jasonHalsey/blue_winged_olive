@@ -124,7 +124,7 @@ figure.effect-oscar h2 {
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
   -webkit-transform: translate3d(0,100%,0);
-  transform: translate3d(0,100%,0) skew(-14deg) rotate(-6deg) translateZ(0);
+  transform: translate3d(0,100%,0);
   line-height:1.0em;
   @media only screen and (max-width: 2000px) {
     margin: 0% 0 10px 0;

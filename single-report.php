@@ -17,6 +17,7 @@ Template Name: river_report
     $steelheadCount = get_post_meta( $post->ID, '_cmb2_bonn_steelhead', true );
     $hatches = get_post_meta( $post->ID, '_cmb2_hatches_multicheckbox', true );
     $hotFlies = get_post_meta( $post->ID, '_cmb2_hot_flies', true );
+    $subtitle = get_post_meta( $post->ID, '_cmb2_sub_title', true );
   ?>
   
   <?php
@@ -50,12 +51,17 @@ Template Name: river_report
                   if (!empty($usgs_site)) {
                 ?>
                   <h2 class="usgs_river_name">Loading...</h2>
-                  <h3 class="river_sub_title"><?php echo get_post_meta( $post->ID, '_cmb2_sub_title', true ); ?></h3>  
+                  <?php if (!empty($subtitle)){ ?>
+                    <h3 class="river_sub_title"><?php echo $subtitle ?></h3> 
+                  <?php } ?> 
                 <?php
                   }else {
                 ?>
                   <h2 class="river_name"><?php the_title(); ?></h2>
-                  <h3 class="river_sub_title"><?php echo get_post_meta( $post->ID, '_cmb2_sub_title', true ); ?></h3>  
+                  <?php if (!empty($subtitle)){ ?>
+                    <h3 class="river_sub_title"><?php echo $subtitle ?></h3> 
+                  <?php } ?>
+                   
                 <?php
                   }
                 ?>

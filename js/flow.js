@@ -17,7 +17,7 @@ weatherFn = function(url) {
     jQuery('.weather_date').text(dateCreate);
     jQuery('.weather_time').text(weatherTime);
     jQuery('.weather_temp').html(weatherTemp + '&deg;');
-    jQuery('.weather_text').html('&nbsp;&nbsp;' + weatherText);
+    jQuery('.weather_text').html(weatherText);
     jQuery('.weather_weather').text(weatherWeather);
 
 

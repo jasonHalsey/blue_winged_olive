@@ -225,9 +225,6 @@ div.feed_block.light{
     margin-right: auto;
     max-width: 100%;
     height: calc(100vh);
-    @media only screen and (max-width: 40em) {
-      height: calc(51vh);
-    }
 }
 
 .hero-arrow-down {
@@ -268,12 +265,20 @@ div.insta_footer{
         list-style-type: none;
         margin: 0;
         display: flex; 
-        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content:space-around;
         li{
             flex-grow:1;
+            flex-shrink: 1;
+            max-width: 150px;
             margin: 0 0.5em 1.25em;
             &:hover{
                 opacity:0.5;
+            }
+        }
+         @media only screen and (max-width: 50em) {
+            li{
+                width:45%
             }
         }
     }
